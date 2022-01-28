@@ -6,6 +6,8 @@ import LightX from "./components/LightX";
 import Turnstile from "./components/Turnstile";
 import TurnstileX from "./components/TurnstileX";
 import TwoSwitchLight from "./components/TwoSwitchLight";
+import TwoSwitchLightX from "./components/TwoSwitchLightX";
+import ThreeSwitchLightX from "./components/ThreeSwitchLightX";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -23,6 +25,8 @@ function App() {
         </div>
         <div style={{ width: "50%", maxWidth: "1000px" }}>
           <TwoSwitchLight />
+          <TwoSwitchLightX />
+          <ThreeSwitchLightX />
         </div>
       </header>
     </div>

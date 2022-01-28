@@ -18,6 +18,7 @@ export default function TwoSwitchLight() {
 
   return (
     <div>
+      <h2>Two Switch Light</h2>
       <p>Light is {lightStatus}</p>
       <label>
         <input
@@ -37,6 +38,7 @@ export default function TwoSwitchLight() {
       </label>
       <div>
         <button onClick={() => setBrokenBulb(true)}>Break bulb</button>
+        <button onClick={() => setBrokenBulb(false)}>Replace bulb</button>
         <button onClick={reset}>RESET</button>
       </div>
     </div>
