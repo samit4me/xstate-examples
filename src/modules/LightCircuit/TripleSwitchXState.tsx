@@ -81,7 +81,7 @@ export default function TripleSwitchXState() {
     <div>
       <h3>React with XState</h3>
       <Links>
-        <GitHubLink href="https://github.com/samit4me/xstate-examples/blob/main/src/modules/LightCircuit/DoubleSwitchXState.tsx" />
+        <GitHubLink href="https://github.com/samit4me/xstate-examples/blob/main/src/modules/LightCircuit/TripleSwitchXState.tsx" />
         <StatelyVizLink href="https://stately.ai/viz/589115c4-f189-4d28-ac33-27c1d7d513ef" />
       </Links>
       <LightLayout>
