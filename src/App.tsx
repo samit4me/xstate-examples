@@ -1,36 +1,49 @@
 import { useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import Light from "./components/Light";
-import LightX from "./components/LightX";
+import DoubleSwitch from "@/modules/LightCircuit/DoubleSwitch";
+import DoubleSwitchXState from "@/modules/LightCircuit/DoubleSwitchXState";
+import SingleSwitch from "@/modules/LightCircuit/SingleSwitch";
+import SingleSwitchXState from "@/modules/LightCircuit/SingleSwitchXState";
+import TripleSwitch from "@/modules/LightCircuit/TripleSwitch";
+import TripleSwitchXState from "@/modules/LightCircuit/TripleSwitchXState";
+import ExampleCard from "./components/ExampleCard";
 import Turnstile from "./components/Turnstile";
 import TurnstileX from "./components/TurnstileX";
-import TwoSwitchLight from "./components/TwoSwitchLight";
-import TwoSwitchLightX from "./components/TwoSwitchLightX";
-import ThreeSwitchLightX from "./components/ThreeSwitchLightX";
 
-function App() {
+export default function App() {
   const [count, setCount] = useState(0);
 
   return (
     <div className="App">
-      <header className="App-header">
-        <div style={{ width: "50%", maxWidth: "1000px" }}>
-          <Light />
-          <LightX />
-        </div>
-        <div style={{ width: "50%", maxWidth: "1000px" }}>
+      <h1>XState examples</h1>
+      <ExampleCard>
+        {/* <div className="card"> */}
+          <SingleSwitch />
+        {/* </div> */}
+        {/* <div className="card"> */}
+          <SingleSwitchXState />
+        {/* </div> */}
+      </ExampleCard>
+      <ExampleCard>
+        {/* <div className="card"> */}
+          <DoubleSwitch />
+        {/* </div> */}
+        {/* <div className="card"> */}
+          <DoubleSwitchXState />
+        {/* </div> */}
+      </ExampleCard>
+      <ExampleCard>
+        {/* <div className="card"> */}
+          <TripleSwitch />
+        {/* </div>
+        <div className="card"> */}
+          <TripleSwitchXState />
+        {/* </div> */}
+      </ExampleCard>
+      {/* <div className="card">
           <Turnstile />
           <TurnstileX />
-        </div>
-        <div style={{ width: "50%", maxWidth: "1000px" }}>
-          <TwoSwitchLight />
-          <TwoSwitchLightX />
-          <ThreeSwitchLightX />
-        </div>
-      </header>
+        </div> */}
     </div>
   );
 }
-
-export default App;
