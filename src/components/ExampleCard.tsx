@@ -10,6 +10,10 @@ export default styled.div`
   width: 100%;
   margin-top: 40px;
 
+  :last-child {
+      margin-bottom: 40px;
+  }
+
   > div {
       min-width: 50%;
       padding: 0 20px;

@@ -1,9 +1,9 @@
 import { useState } from "react";
+import Controls from "@/components/Controls";
+import ExampleLayout from "@/components/ExampleLayout";
 import GitHubLink from "@/components/GitHubLink";
 import Links from "@/components/Links";
 import LightBulb from "./components/LightBulb";
-import LightControls from "./components/LightControls";
-import LightLayout from "./components/LightLayout";
 import LightSwitch from "./components/LightSwitch";
 
 const isOn = (switches: boolean[]) => switches.filter(sw => sw).length % 2 === 0;
@@ -29,17 +29,17 @@ export default function TripleSwitch() {
       <Links>
         <GitHubLink href="https://github.com/samit4me/xstate-examples/blob/main/src/modules/LightCircuit/TripleSwitch.tsx" />
       </Links>
-      <LightLayout>
-        <LightControls>
+      <ExampleLayout>
+        <Controls>
           <button onClick={() => setBroken(true)}>Break</button>
           <button onClick={() => setBroken(false)}>Fix</button>
           <button onClick={reset}>RESET</button>
-        </LightControls>
+        </Controls>
         <LightBulb broken={broken} on={on} />
         <LightSwitch checked={switch1} onChange={() => setSwitch1(!switch1)} />
         <LightSwitch checked={switch2} onChange={() => setSwitch2(!switch2)} />
         <LightSwitch checked={switch3} onChange={() => setSwitch3(!switch3)} />
-      </LightLayout>
+      </ExampleLayout>
     </div>
   );
 }

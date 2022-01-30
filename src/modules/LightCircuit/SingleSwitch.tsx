@@ -1,9 +1,9 @@
 import { useState } from "react";
+import Controls from "@/components/Controls";
+import ExampleLayout from "@/components/ExampleLayout";
 import GitHubLink from "@/components/GitHubLink";
 import Links from "@/components/Links";
 import LightBulb from "./components/LightBulb";
-import LightControls from "./components/LightControls";
-import LightLayout from "./components/LightLayout";
 import LightSwitch from "./components/LightSwitch";
 
 export default function SingleSwitch() {
@@ -21,15 +21,15 @@ export default function SingleSwitch() {
       <Links>
         <GitHubLink href="https://github.com/samit4me/xstate-examples/blob/main/src/modules/LightCircuit/SingleSwitch.tsx" />
       </Links>
-      <LightLayout>
-        <LightControls>
+      <ExampleLayout>
+        <Controls>
           <button onClick={() => setBroken(true)}>Break</button>
           <button onClick={() => setBroken(false)}>Fix</button>
           <button onClick={reset}>RESET</button>
-        </LightControls>
+        </Controls>
         <LightBulb broken={broken} on={on} />
         <LightSwitch checked={on} onChange={() => setOn(!on)} />
-      </LightLayout>
+      </ExampleLayout>
     </div>
   );
 }

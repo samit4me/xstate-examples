@@ -1,11 +1,11 @@
 import { useMachine } from "@xstate/react";
 import { assign, createMachine } from "xstate";
+import Controls from "@/components/Controls";
+import ExampleLayout from "@/components/ExampleLayout";
 import GitHubLink from "@/components/GitHubLink";
 import Links from "@/components/Links";
 import StatelyVizLink from "@/components/StatelyVizLink";
 import LightBulb from "./components/LightBulb";
-import LightControls from "./components/LightControls";
-import LightLayout from "./components/LightLayout";
 import LightSwitch from "./components/LightSwitch";
 
 interface Context {
@@ -78,16 +78,16 @@ export default function DoubleSwitchXState() {
         <GitHubLink href="https://github.com/samit4me/xstate-examples/blob/main/src/modules/LightCircuit/DoubleSwitchXState.tsx" />
         <StatelyVizLink href="https://stately.ai/viz/e481f752-87aa-416e-b0d5-2a855c3db341" />
       </Links>
-      <LightLayout>
-        <LightControls>
+      <ExampleLayout>
+        <Controls>
           <button onClick={() => send("BREAK")}>Break</button>
           <button onClick={() => send("FIX")}>Fix</button>
           <button onClick={() => send("RESET")}>RESET</button>
-        </LightControls>
+        </Controls>
         <LightBulb broken={value === "broken"} on={value === "lightOn"} />
         <LightSwitch checked={switch1} onChange={() => send("FLIP_SWITCH1")} />
         <LightSwitch checked={switch2} onChange={() => send("FLIP_SWITCH2")} />
-      </LightLayout>
+      </ExampleLayout>
     </div>
   );
 }

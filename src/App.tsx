@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./App.css";
+import LockedDoor from "@/modules/Door/LockedDoor";
+import LockedDoorXState from "@/modules/Door/LockedDoorXState";
 import DoubleSwitch from "@/modules/LightCircuit/DoubleSwitch";
 import DoubleSwitchXState from "@/modules/LightCircuit/DoubleSwitchXState";
 import SingleSwitch from "@/modules/LightCircuit/SingleSwitch";
@@ -17,28 +19,20 @@ export default function App() {
     <div className="App">
       <h1>XState examples</h1>
       <ExampleCard>
-        {/* <div className="card"> */}
+        <LockedDoor />
+        <LockedDoorXState />
+      </ExampleCard>
+      <ExampleCard>
           <SingleSwitch />
-        {/* </div> */}
-        {/* <div className="card"> */}
           <SingleSwitchXState />
-        {/* </div> */}
       </ExampleCard>
       <ExampleCard>
-        {/* <div className="card"> */}
           <DoubleSwitch />
-        {/* </div> */}
-        {/* <div className="card"> */}
           <DoubleSwitchXState />
-        {/* </div> */}
       </ExampleCard>
       <ExampleCard>
-        {/* <div className="card"> */}
           <TripleSwitch />
-        {/* </div>
-        <div className="card"> */}
           <TripleSwitchXState />
-        {/* </div> */}
       </ExampleCard>
       {/* <div className="card">
           <Turnstile />

@@ -31,6 +31,12 @@ button:active {
   box-shadow: none;
 }
 
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #cfcfcf;
+}
+
 .App {
   text-align: center;
   min-height: 100vh;
